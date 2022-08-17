@@ -71,7 +71,7 @@ public class DemoLtiLaunchServlet extends LtiLaunchServlet
       throw new ServletException( "Wrong type of LtiState." );
     DemoState state = (DemoState)ltistate;
     
-    String tooltype = lticlaims.getLtiCustom().getToolType();
+    String tooltype = lticlaims.getLtiCustom().getAsString( "lti.jonmaber.co.uk#tool_type" );
     LaunchState platformlaunch = null;
     CourseLaunchState courselaunch = null;
     
